@@ -13,6 +13,13 @@
 		4250928E1C7C033E00FF4736 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4250928D1C7C033E00FF4736 /* Images.xcassets */; };
 		425092911C7C033E00FF4736 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4250928F1C7C033E00FF4736 /* LaunchScreen.xib */; };
 		4250929D1C7C033F00FF4736 /* Amorous_BugsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250929C1C7C033F00FF4736 /* Amorous_BugsTests.swift */; };
+		425092A71C7C03D000FF4736 /* ABComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425092A61C7C03D000FF4736 /* ABComputer.swift */; };
+		425092A91C7C117F00FF4736 /* BugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425092A81C7C117F00FF4736 /* BugView.swift */; };
+		425092AB1C7C15F200FF4736 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425092AA1C7C15F200FF4736 /* Vector.swift */; };
+		425092B21C7C658600FF4736 /* bugA.png in Resources */ = {isa = PBXBuildFile; fileRef = 425092AE1C7C658600FF4736 /* bugA.png */; };
+		425092B31C7C658600FF4736 /* bugB.png in Resources */ = {isa = PBXBuildFile; fileRef = 425092AF1C7C658600FF4736 /* bugB.png */; };
+		425092B41C7C658600FF4736 /* bugC.png in Resources */ = {isa = PBXBuildFile; fileRef = 425092B01C7C658600FF4736 /* bugC.png */; };
+		425092B51C7C658600FF4736 /* bugD.png in Resources */ = {isa = PBXBuildFile; fileRef = 425092B11C7C658600FF4736 /* bugD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		425092961C7C033F00FF4736 /* Amorous BugsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Amorous BugsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4250929B1C7C033F00FF4736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4250929C1C7C033F00FF4736 /* Amorous_BugsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amorous_BugsTests.swift; sourceTree = "<group>"; };
+		425092A61C7C03D000FF4736 /* ABComputer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABComputer.swift; sourceTree = "<group>"; };
+		425092A81C7C117F00FF4736 /* BugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugView.swift; sourceTree = "<group>"; };
+		425092AA1C7C15F200FF4736 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		425092AE1C7C658600FF4736 /* bugA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bugA.png; path = "Amorous Bugs/bugA.png"; sourceTree = "<group>"; };
+		425092AF1C7C658600FF4736 /* bugB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bugB.png; path = "Amorous Bugs/bugB.png"; sourceTree = "<group>"; };
+		425092B01C7C658600FF4736 /* bugC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bugC.png; path = "Amorous Bugs/bugC.png"; sourceTree = "<group>"; };
+		425092B11C7C658600FF4736 /* bugD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bugD.png; path = "Amorous Bugs/bugD.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,10 @@
 		425092781C7C033E00FF4736 = {
 			isa = PBXGroup;
 			children = (
+				425092AE1C7C658600FF4736 /* bugA.png */,
+				425092AF1C7C658600FF4736 /* bugB.png */,
+				425092B01C7C658600FF4736 /* bugC.png */,
+				425092B11C7C658600FF4736 /* bugD.png */,
 				425092831C7C033E00FF4736 /* Amorous Bugs */,
 				425092991C7C033F00FF4736 /* Amorous BugsTests */,
 				425092821C7C033E00FF4736 /* Products */,
@@ -79,6 +97,9 @@
 			children = (
 				425092861C7C033E00FF4736 /* AppDelegate.swift */,
 				425092881C7C033E00FF4736 /* ViewController.swift */,
+				425092A81C7C117F00FF4736 /* BugView.swift */,
+				425092A61C7C03D000FF4736 /* ABComputer.swift */,
+				425092AA1C7C15F200FF4736 /* Vector.swift */,
 				4250928A1C7C033E00FF4736 /* Main.storyboard */,
 				4250928D1C7C033E00FF4736 /* Images.xcassets */,
 				4250928F1C7C033E00FF4736 /* LaunchScreen.xib */,
@@ -161,6 +182,7 @@
 				TargetAttributes = {
 					425092801C7C033E00FF4736 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 928ALZBPY7;
 					};
 					425092951C7C033F00FF4736 = {
 						CreatedOnToolsVersion = 6.2;
@@ -193,7 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4250928C1C7C033E00FF4736 /* Main.storyboard in Resources */,
+				425092B31C7C658600FF4736 /* bugB.png in Resources */,
+				425092B41C7C658600FF4736 /* bugC.png in Resources */,
+				425092B51C7C658600FF4736 /* bugD.png in Resources */,
 				425092911C7C033E00FF4736 /* LaunchScreen.xib in Resources */,
+				425092B21C7C658600FF4736 /* bugA.png in Resources */,
 				4250928E1C7C033E00FF4736 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				425092891C7C033E00FF4736 /* ViewController.swift in Sources */,
+				425092A91C7C117F00FF4736 /* BugView.swift in Sources */,
+				425092AB1C7C15F200FF4736 /* Vector.swift in Sources */,
 				425092871C7C033E00FF4736 /* AppDelegate.swift in Sources */,
+				425092A71C7C03D000FF4736 /* ABComputer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Amorous Bugs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Amorous Bugs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
