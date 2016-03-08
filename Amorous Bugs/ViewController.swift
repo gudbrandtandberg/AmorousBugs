@@ -7,17 +7,32 @@
 //
 
 import UIKit
-import Darwin
+
+enum StateSwitch {
+	case Go, Reset
+	
+	mutating func next() {
+		switch (self) {
+		case .Go:
+			self = .Reset
+		case .Reset:
+			self = .Go
+		}
+	}
+}
+
 
 class ViewController: UIViewController {
 
 	let bugComputer : ABComputer
+	var state : StateSwitch
 	@IBOutlet weak var bugView: BugView!
-	
+	@IBOutlet weak var mainButton: UIButton!
+
 	required init(coder aDecoder: NSCoder) {
 		
 		bugComputer = ABComputer()
-	
+		state = .Go
 		super.init(coder: aDecoder)
 		
 	}
@@ -35,19 +50,32 @@ class ViewController: UIViewController {
 	}
 	
 	func updateView(positions : [Vector]) {
-		bugView.updatePositions(positions)
+		bugView.addPosition(positions)
 	}
 
 	@IBAction func runSimulation() {
 		
-		while (!bugComputer.simulationHasConverged) {
-			let positions = bugComputer.step()
-			updateView(positions)
+		switch (state) {
+			
+		case .Go:
+				mainButton.setTitle("Reset", forState: .Normal)
+				
+				//first generate trajectories
+				while (!bugComputer.simulationHasConverged) {
+					let positions = bugComputer.step()
+					updateView(positions)
+				}
+			
+				//then run animation
+				bugView.animateBugs()
+				break;
+			
+		case .Reset:
+				mainButton.setTitle("GO!", forState: .Normal)
+				bugView.resetBugs()
 		}
 		
-		bugView.animateBugs()
-		print("Arc length: \(bugComputer.arcLength)")
-		
+		state.next()
 	}
 
 }

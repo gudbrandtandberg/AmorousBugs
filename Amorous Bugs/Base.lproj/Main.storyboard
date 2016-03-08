@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,33 +19,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKa-xK-tbF" customClass="BugView" customModule="Amorous_Bugs" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKa-xK-tbF" customClass="BugView" customModule="Amorous_Bugs" customModuleProvider="target">
                                 <rect key="frame" x="160" y="159" width="281" height="281"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BKa-xK-tbF" secondAttribute="height" multiplier="1:1" id="RKJ-RK-DCZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRJ-it-gPt">
-                                <rect key="frame" x="246" y="28" width="108" height="30"/>
-                                <state key="normal" title="Run Simulation!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE AMOROUS BUGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er7-va-TK0">
+                                <rect key="frame" x="16" y="28" width="568" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="k7G-6K-0bj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGR-J0-mXf">
+                                <rect key="frame" x="233" y="547" width="135" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="cYh-II-hkN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="3" height="1"/>
+                                <state key="normal" title="GO!"/>
                                 <connections>
-                                    <action selector="runSimulation" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPH-dy-rAX"/>
+                                    <action selector="runSimulation" destination="BYZ-38-t0r" eventType="touchUpInside" id="ra2-5n-gSl"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="BKa-xK-tbF" secondAttribute="centerX" constant="-0.5" id="Cgn-7x-LYN"/>
+                            <constraint firstItem="er7-va-TK0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K3u-0V-tBr"/>
                             <constraint firstAttribute="centerY" secondItem="BKa-xK-tbF" secondAttribute="centerY" constant="0.5" id="Mt2-4c-HDy"/>
-                            <constraint firstItem="cRJ-it-gPt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WBc-Sa-stc"/>
-                            <constraint firstAttribute="centerX" secondItem="cRJ-it-gPt" secondAttribute="centerX" id="lEQ-fm-5GY"/>
+                            <constraint firstAttribute="centerX" secondItem="WGR-J0-mXf" secondAttribute="centerX" constant="-0.5" id="VwB-Oq-t2k"/>
+                            <constraint firstItem="er7-va-TK0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bdP-mc-obt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WGR-J0-mXf" secondAttribute="bottom" constant="20" id="dMw-BT-Sja"/>
+                            <constraint firstItem="er7-va-TK0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uin-et-KZW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bugView" destination="BKa-xK-tbF" id="Rna-08-cbH"/>
+                        <outlet property="mainButton" destination="WGR-J0-mXf" id="yiI-zv-Ec3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
